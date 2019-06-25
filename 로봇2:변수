@@ -1,8 +1,8 @@
 int x=60;
-int y=390;
+int y=390;//동그라미 몸통의 중심점
 int bodyHeight=180;
 int neckHeight=40;
-int radius=45;
+int radius=45;//반지름
 int ny = y-bodyHeight - neckHeight - radius;
 
 size(170,480);
@@ -13,7 +13,7 @@ ellipseMode(RADIUS);
 //neck
 stroke(255);
 line(x+2, y-bodyHeight,x+2,ny);
-line(x+12,y-bodyHeight,x+12,ny);
+line(x+12,y-bodyHeight,x+12,ny);//가운데 선, 안테나 중심과 동일
 line(x+22,y-bodyHeight,x+22,ny);
 
 //antena
