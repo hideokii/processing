@@ -1,0 +1,19 @@
+float x,y,px,py;
+float easing=0.05;
+
+void setup(){
+  size(480,120);
+  stroke(0,100);
+}
+
+void draw(){
+  float targetX=mouseX;
+  float targetY=mouseY;
+  x+=(targetX-x)*easing;
+  y+=(targetY-y)*easing;
+  float weight=dist(x,y,px,py); //이전 좌표와 거리차이가 많이 날수록 선의 두께가 굵어진다.
+  strokeWeight(weight);
+  line(x,y,px,py); //선을 그리는데 감속기법으로 원이 따라가는 것처럼 보인다.
+  px=x;
+  py=y;
+}
