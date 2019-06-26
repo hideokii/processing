@@ -8,7 +8,7 @@ void draw(){
   stroke(102);
   line(40,0,70,height);
   if(mousePressed){
-    if(mouseButton==LEFT) stroke(255);
+    if(mouseButton==LEFT) stroke(255); //LEFT, CENTER, RIGHT 중에서 선택가능
     else stroke(0);
     line(0,70,width,50);
   }
