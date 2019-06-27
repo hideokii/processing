@@ -5,7 +5,8 @@ void setup(){
 }
 
 void draw(){
-  if(keyPressed&&(key==CODED)){
+  //background(200);  입력하면 사각형이 움직이는 것처럼 보인다.
+  if(keyPressed&&(key==CODED)){ //특수한 키들 ALT, CONTROL, SHIFT, UP, DOWN, LEFT, RIGHT
     if(keyCode==LEFT){
       x--;
     }
