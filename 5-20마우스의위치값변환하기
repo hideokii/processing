@@ -8,7 +8,7 @@ void draw(){
   stroke(102);
   line(mouseX,0,mouseX,height);
   stroke(0);
-  float mx=mouseX/2+60;
+  float mx=mouseX/2+60; //2로 나눈것만 실행해보고 이해하기
   line(mx,0,mx,height);
   
 }
