@@ -1,0 +1,14 @@
+void setup(){
+  size(240,120);
+  strokeWeight(12);
+}
+
+void draw(){
+  background(200);
+  stroke(102);
+  line(mouseX,0,mouseX,height);
+  stroke(0);
+  float mx= map(mouseX,0,width,60,180); // mx = mouseX/2+60 와 똑같은 개념
+  line(mx,0,mx,height);
+  
+}
