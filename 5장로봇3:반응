@@ -6,7 +6,7 @@ int radius=45;
 float easing=0.04;
 
 void setup(){
-  size(360,480);
+  size(720,480);
   ellipseMode(RADIUS);
 }
 
