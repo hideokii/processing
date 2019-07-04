@@ -1,0 +1,12 @@
+void setup(){
+  size(120,120);
+  rectMode(CENTER);
+}
+
+void draw(){
+  translate(mouseX,mouseY);
+  float scalar=mouseX/60.0;
+  scale(scalar);
+  strokeWeight(1.0/scalar);
+  rect(0,0,30,30);
+}
