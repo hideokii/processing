@@ -1,0 +1,64 @@
+float x=60;
+float y=390;
+int bodyHeight=180;
+int neckHeight=40;
+int radius=45;
+float easing=0.04;
+
+void setup(){
+  size(720,480);
+  ellipseMode(RADIUS);
+}
+
+void draw(){
+  strokeWeight(2);
+  float ny = -bodyHeight - neckHeight - radius;
+  background(0,150,200);
+  
+  translate(mouseX,y);
+  
+  if(mousePressed){
+    scale(1.0);
+  }
+  else{
+    scale(0.6);
+  }
+  
+
+  //neck
+  stroke(255);
+  line(2,-bodyHeight,2,ny);
+  line(12,-bodyHeight,12,ny);
+  line(22,-bodyHeight,22,ny);
+
+  //antena
+  pushMatrix();
+  translate(12,ny);
+  float angle=-PI/30.0;
+  for(int i=0;i<=30;i++){
+    line(80,0,0,0);
+    rotate(angle);
+  }
+  popMatrix();
+
+  //body
+  noStroke();
+  fill(255,204,0);
+  ellipse(0,-33,33,33);
+  fill(0);
+  rect(-45,-bodyHeight,90,bodyHeight-33);
+  fill(255,204,0);
+  rect(-45,-bodyHeight+17,90,6);
+
+  //head
+  fill(0);
+  ellipse(12,ny,radius,radius);
+  fill(255);
+  ellipse(24,ny-6,14,14);
+  fill(0);
+  ellipse(24,ny-6,3,3);
+  fill(153,204,255);
+  ellipse(0,ny-8,5,5);
+  ellipse(30,ny-26,4,4);
+  ellipse(41,ny+6,3,3);
+}
