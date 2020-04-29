@@ -1,0 +1,35 @@
+float len;
+void setup(){
+  size(400,400);
+}
+
+void tri(float h){
+  h = h/2;
+  if(h>5){
+    pushMatrix();
+    translate(0, h);
+    triangle(0,h,h,h,h/2,0);
+    tri(h);
+    popMatrix();
+    
+    pushMatrix();
+    translate(h/2,0);
+    triangle(0,h,h,h,h/2,0);
+    tri(h);
+    popMatrix();
+   
+    pushMatrix();
+    translate(h, h);
+    triangle(0,h,h,h,h/2,0);
+    tri(h);
+    popMatrix();
+  }
+}
+    
+void draw(){
+  background(255);
+  stroke(0);
+  len = width;
+  triangle(0,len, len,len, len/2,0);
+  tri(len);
+}
