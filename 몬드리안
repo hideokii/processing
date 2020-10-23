@@ -1,0 +1,21 @@
+void mond(int x0, int y0, int x1, int y1, int n){
+  if(n==0){
+    color c[] = { #ff0000, #00ff00, #0000ff, #ffff00, #ffffff };
+    fill(c[int(random(c.length))]);
+    strokeWeight(4);
+    rect(x0,y0,x1-x0-3,y1-y0-3);
+  }
+  else{
+    int i= int(random(x0,x1));
+    int j = int(random(y0,y1));
+    mond(x0,y0,i,j,n-1);
+    mond(i,y0,x1,j,n-1);
+    mond(x0,j,i,y1,n-1);
+    mond(i,j,x1,y1,n-1);
+  }
+}
+
+void setup(){
+  size(400,400);
+  mond(1,1,400,400,2);
+}
