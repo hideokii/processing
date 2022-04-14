@@ -1,0 +1,7 @@
+void setup(){
+  printArray(PFont.list());
+}
+
+void draw(){
+  
+}
