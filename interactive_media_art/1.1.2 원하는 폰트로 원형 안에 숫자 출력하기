@@ -8,7 +8,7 @@ void setup(){
   background(255);
   frameRate(5);
   printArray(PFont.list());  //폰트 리스트 출력
-  font = createFont("ArialTextG1", 160);
+  font = createFont("Verdana", 160);
   textFont(font);
 }
 
