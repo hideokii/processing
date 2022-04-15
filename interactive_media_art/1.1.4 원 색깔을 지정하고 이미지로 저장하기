@@ -18,7 +18,7 @@ void setup(){
 
 void draw(){
   fill(255, 5);
-  rect(0, 0, width, height);
+  rect(0, 0, width, height); //잔상효과를 위한 반투명한 사각형 그림
   chance = int(random(100));
   x = int(random(width));
   y = int(random(height));
@@ -52,7 +52,7 @@ void draw(){
 
 void keyPressed(){
   if (key == 's'){
-    saveFrame("image" + nf(cnt, 3) + ".jpg");
+    saveFrame("image" + nf(cnt, 3) + ".jpg");  //nf는 cnt에 들어있는 숫자를 몇자리로 출력할건지. 여기서는 3자리 001, 002
     cnt += 1;
   }
 }
